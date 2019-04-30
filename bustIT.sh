@@ -74,6 +74,31 @@ atomExtras() {
   ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 }
 
+localMacOSSetup() {
+  #The following will setup local macOS preferences (Wallpaper, Dock Settings, etc)
+
+  # Set Dark Mode
+  tell application "System Events"
+      tell appearance preferences
+          set dark mode to true
+      end tell
+  end tell
+
+  #Only show open apps in the dock; remove everything else
+  defaults write com.apple.dock static-only -bool true
+
+  #Auto-hide dock
+  defaults write com.apple.dock autohide -bool true
+
+  #Download new wallpaper
+  curl -L -o ~/Pictures/wallpaper.png https://raw.githubusercontent.com/leblanck/bustit/master/wallpaper.png
+  #Set new wallpaper
+  osascript -e ‘tell application “Finder” to set desktop picture to POSIX file “~/Pictures/wallpaper.png”’
+
+  #restart dock process
+  killall Dock
+}
+
 homebrewInstall() {
   echo "`date` Installing Homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -86,6 +111,9 @@ homebrewInstall() {
   sleep 5
   echo "`date` Installing PWGen..."
   brew install pwgen
+  sleep 5
+  echo "`date` Setting up macOS local preferences..."
+  localMacOSSetup
   sleep 5
   echo "`date` Done!"
 }
