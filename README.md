@@ -18,6 +18,7 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * Atom
 * Adobe Creative Suite
 * Fliqlo
+* Dozer
 * Zeplin
 * Spectacle
 * Clipy
