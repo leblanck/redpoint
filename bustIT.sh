@@ -78,11 +78,11 @@ localMacOSSetup() {
   #The following will setup local macOS preferences (Wallpaper, Dock Settings, etc)
 
   # Set Dark Mode
-  tell application "System Events"
+  osascript -e 'tell application "System Events"
       tell appearance preferences
           set dark mode to true
       end tell
-  end tell
+  end tell'
 
   #Only show open apps in the dock; remove everything else
   defaults write com.apple.dock static-only -bool true
@@ -100,22 +100,36 @@ localMacOSSetup() {
 }
 
 homebrewInstall() {
-  echo "`date` Installing Homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  sleep 5
-  echo "`date` Tapping Cask..."
-  brew tap homebrew/cask
-  sleep 5
-  echo "`date` Installing Apps..."
-  caskInstaller
-  sleep 5
-  echo "`date` Installing PWGen..."
-  brew install pwgen
-  sleep 5
-  echo "`date` Setting up macOS local preferences..."
-  localMacOSSetup
-  sleep 5
-  echo "`date` Done!"
+  if [[ $(command -v brew) == "" ]]; then
+    echo "Installing Hombrew"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "Updating Homebrew"
+    brew update
+  fi
+    sleep 5
+    echo "`date` Tapping Cask..."
+    brew tap homebrew/cask
+    sleep 5
+    echo "`date` Installing Apps..."
+    caskInstaller
+    sleep 5
+    echo "`date` Installing PWGen..."
+    brew install pwgen
+    sleep 5
+    echo "`date` Installing Hugo..."
+    brew install hugo
+    sleep 5
+    echo "`date` Installing npm..."
+    brew install npm
+    sleep 5
+    echo "`date` Installing Firebase..."
+    npm install -g firebase-tools
+    sleep 5
+    echo "`date` Setting up macOS local preferences..."
+    localMacOSSetup
+    sleep 5
+    echo "`date` Done!"
 }
 
 homebrewInstall
