@@ -93,7 +93,7 @@ localMacOSSetup() {
   #Download new wallpaper
   curl -L -o ~/Pictures/wallpaper.png https://raw.githubusercontent.com/leblanck/bustit/master/wallpaper.png
   #Set new wallpaper
-  osascript -e ‘tell application “Finder” to set desktop picture to POSIX file “~/Pictures/wallpaper.png”’
+  osascript -e ‘tell application "System Events" to tell every desktop to set picture to "~/Pictures/wallpaper.png"’
 
   #restart dock process
   killall Dock
