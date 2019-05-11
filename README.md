@@ -22,6 +22,7 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * Zeplin
 * Spectacle
 * Clipy
+* Github Desktop
 * Wireshark
 * Slack
 * Messenger
