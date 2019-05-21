@@ -18,6 +18,7 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * Atom
 * Adobe Creative Suite
 * Fliqlo
+* iTerm2
 * Dozer
 * Zeplin
 * Spectacle
@@ -37,6 +38,11 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * pigments
 5. Installs Atom CLI Tools
 6. Installs PWGen
+7. Installs npm
+7. Installs Firebase
+8. Installs [Trash](https://github.com/sindresorhus/trash)
+9. Sets up local zsh shell
+10. Sets up local macOS preferences
 
 ###### Alternate Download
 ```bash
