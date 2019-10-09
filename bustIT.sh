@@ -103,6 +103,9 @@ shellSetup() {
   cd ..
   rm -rf fonts
   
+  #Download Cascadia Font
+  curl -L -o ~/Cascadia.ttf https://github.com/microsoft/cascadia-code/releases/download/v1910.04/Cascadia.ttf
+  
   #The following is option/personal preference (to be scripted eventually):
   ## Set Font and Non-ASCII font to Hack 12pt Reg (iTerm2 > Preferences > Profiles > Text)
   ## Add alias's to ~/.zshrc
