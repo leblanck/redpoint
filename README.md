@@ -10,13 +10,13 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 3. run using `./bustIT.sh`
 
 #### What does this do?
-1. Setup Logging to: `/Library/Logs/butIT.log`
+1. Setup Logging to: `/Library/Logs/bustIT.log`
 2. Installs the following apps
 * Sketch
 * Figma
 * Dropbox
 * Atom
-* Adobe Creative Suite
+* Adobe Creative Cloud
 * Fliqlo
 * iTerm2
 * Dozer
@@ -26,6 +26,7 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * Github Desktop
 * Wireshark
 * Slack
+* Visual Studio Code
 * Messenger
 * XnViewMP
 3. Installs Themes for Atom:
