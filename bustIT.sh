@@ -61,6 +61,7 @@ atomExtras() {
   echo "`date` Installing Atom themes.."
   apm install apple-wwdc-2016-syntax
   apm install firewatch-syntax
+  apm install gruvbox
   apm install halcyon-syntax
 
   #Install Atom Packages
