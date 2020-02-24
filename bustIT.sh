@@ -6,7 +6,7 @@
 #   Cask WishList is located    #
 #   below this description.     #
 #                               #
-#   Last Update: 05/11/19       #
+#   Last Update: 02/24/2020     #
 #################################
 # Cask WishList/To Do         #
 #                             #
@@ -154,6 +154,10 @@ homebrewInstall() {
     sleep 5
     echo "`date` Tapping Cask..."
     brew tap homebrew/cask
+    sleep 5
+    brew tap homebrew/cask-fonts
+    sleep 5
+    brew tap cjbassi/gotop
     sleep 5
     echo "`date` Installing Apps..."
     caskInstaller
