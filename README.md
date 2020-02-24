@@ -20,6 +20,7 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * Fliqlo
 * iTerm2
 * Dozer
+* Hack Font
 * Zeplin
 * Spectacle
 * Clipy
@@ -33,6 +34,7 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * firewatch-syntax
 * halcyon-syntax
 * apple-wwdc-2016-syntax
+* gruvbox
 4. Installs Packages for Atom:
 * file-icons
 * minimap
@@ -40,7 +42,6 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 5. Installs Atom CLI Tools
 6. Installs PWGen
 7. Installs npm
-7. Installs Firebase
 8. Installs [Trash](https://github.com/sindresorhus/trash)
 9. Sets up local zsh shell
 10. Sets up local macOS preferences
@@ -54,5 +55,3 @@ OR (may be outdated)
 ```bash
 curl -L -o bustIT.sh https://leblanck.github.io/bustIT.sh
 ```
-
-[![Stories in Ready](https://badge.waffle.io/leblanck/leblanck.github.io.png?label=ready&title=Ready)](http://waffle.io/leblanck/leblanck.github.io)
