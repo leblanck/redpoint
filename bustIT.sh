@@ -92,8 +92,14 @@ shellSetup() {
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
   #Download iTerm theme
+  mkdir ~/iTermSetup
   # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
-  curl -L -o ~/halcyon.itermcolors  https://raw.githubusercontent.com/bchiang7/halcyon-iterm/master/halcyon.itermcolors
+  curl -L -o ~/iTermSetup/halcyon.itermcolors  https://raw.githubusercontent.com/bchiang7/halcyon-iterm/master/halcyon.itermcolors
+  
+  #Download personal iTerm2 Config (Import from Preferences > General > Preferences > Load from custom folder)
+  curl -L -o ~/iTermSetup/com.googlecode.iterm2.plist
+  #Download personal iTerm2 theme (based on Gruvbox) (Possibly not needed it above plist is imported correctly)
+  curl -L -o ~/iTermSetup/kl_gruv.itermcolors
 
   #Install Powerline Font pack
   mkdir ~/repos
