@@ -101,6 +101,9 @@ shellSetup() {
   #Download personal iTerm2 theme (based on Gruvbox) (Possibly not needed it above plist is imported correctly)
   curl -L -o ~/iTermSetup/kl_gruv.itermcolors https://raw.githubusercontent.com/leblanck/bustit/master/resources/kl_gruv.itermcolors
 
+  #VSCODE Theme
+  #https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox
+
   #Install Powerline Font pack
   mkdir ~/repos
   cd ~/repos
