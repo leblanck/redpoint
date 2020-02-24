@@ -165,9 +165,9 @@ homebrewInstall() {
     echo "`date` Installing PWGen..."
     brew install pwgen
     sleep 5
-    echo "`date` Installing Hugo..."
-    brew install hugo
-    sleep 5
+    #echo "`date` Installing Hugo..."
+    #brew install hugo
+    #sleep 5
     echo "`date` Installing GoTop..."
     brew install gotop
     sleep 5
@@ -177,9 +177,9 @@ homebrewInstall() {
     echo "`date` Installing npm..."
     brew install npm
     sleep 5
-    echo "`date` Installing Firebase..."
-    npm install -g firebase-tools
-    sleep 5
+    #echo "`date` Installing Firebase..."
+    #npm install -g firebase-tools
+    #sleep 5
     echo "`date` Setting up shell preferences..."
     shellSetup
     sleep 5
