@@ -31,7 +31,7 @@ caskInstaller() {
   # This will iterate through cask installs, only stopping when a trigger is hit to execute
   # additional commands for that specific installer.
   # To add additional casks, add them into $casks array.
-  declare -a casks=("spectacle" "wireshark" "font-hack" "clipy" "atom" "slack" "github" "iterm2" "zeplin" "dozer" "figma" "messenger" "dropbox" "sketch" "visual-studio-code" "xnviewmp" "fliqlo")
+  declare -a casks=("spectacle" "wireshark" "font-hack" "clipy" "atom" "spotify" "slack" "github" "iterm2" "zeplin" "dozer" "figma" "messenger" "dropbox" "sketch" "visual-studio-code" "xnviewmp" "fliqlo")
   atomTrigger="atom"
   adobeTrigger="adobe-creative-cloud"
 
@@ -181,8 +181,12 @@ homebrewInstall() {
     echo "`date` Installing GoTop..."
     brew install gotop
     sleep 5
+    xcode-select --install
     echo "`date` Installing neofetch..."
     brew install neofetch
+    sleep 5
+    echo "`date` Installing Spicetify..."
+    brew install khanhas/tap/spicetify-cli
     sleep 5
     echo "`date` Installing npm..."
     brew install npm
