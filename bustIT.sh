@@ -31,7 +31,7 @@ caskInstaller() {
   # This will iterate through cask installs, only stopping when a trigger is hit to execute
   # additional commands for that specific installer.
   # To add additional casks, add them into $casks array.
-  declare -a casks=("spectacle" "wireshark" "font-hack" "clipy" "atom" "spotify" "slack" "github" "iterm2" "zeplin" "dozer" "figma" "messenger" "dropbox" "sketch" "visual-studio-code" "xnviewmp" "fliqlo")
+  declare -a casks=("spectacle" "wireshark" "font-hack" "clipy" "atom" "spotify" "slack" "github" "iterm2" "zeplin" "dozer" "figma" "messenger" "itsycal" "dropbox" "sketch" "visual-studio-code" "xnviewmp" "fliqlo")
   atomTrigger="atom"
   adobeTrigger="adobe-creative-cloud"
 
