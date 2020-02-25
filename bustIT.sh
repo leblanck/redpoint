@@ -188,6 +188,8 @@ homebrewInstall() {
     echo "`date` Installing Spicetify..."
     brew install khanhas/tap/spicetify-cli
     sleep 5
+    spicetify backup apply enable-devtool
+    sleep 5
     echo "`date` Installing npm..."
     brew install npm
     sleep 5
