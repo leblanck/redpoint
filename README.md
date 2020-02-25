@@ -27,6 +27,8 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 * Github Desktop
 * Wireshark
 * Slack
+* Spotify
+* Spicetify
 * Visual Studio Code
 * Messenger
 * XnViewMP
@@ -43,8 +45,10 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 6. Installs PWGen
 7. Installs npm
 8. Installs [Trash](https://github.com/sindresorhus/trash)
-9. Sets up local zsh shell
-10. Sets up local macOS preferences
+9. Installs GoTop
+10. Installs neofetch
+11. Sets up local zsh shell
+12. Sets up local macOS preferences
 
 ###### Alternate Download
 ```bash
