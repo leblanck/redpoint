@@ -6,19 +6,19 @@
 #   Cask WishList is located    #
 #   below this description.     #
 #                               #
-#   Last Update: 02/24/2020     #
+#   Last Update: 02/26/2020     #
 #################################
-# Cask WishList/To Do         #
-#                             #
-#                             #
-#  Cask list available using: #
-#     brew search --casks     #
-###############################
+# Cask WishList/To Do           #
+#                               #
+#                               #
+#  Cask list available using:   #
+#     brew search --casks       #
+#################################
 
 #@@@@@@@@@@@@ MAIN @@@@@@@@@@@@
 
 # LOG ##########################################
-LogFile="/Library/Logs/bustIT.log"
+LogFile="/Library/Logs/redPoint.log"
 if [[ ! -e $LogFile ]]; then
     sudo touch $LogFile && sudo exec >> $LogFile
     echo "`date` ========== Log File Created"
@@ -40,7 +40,6 @@ caskInstaller() {
     "atom"
     "spotify"
     "slack"
-    "github"
     "iterm2"
     "zeplin"
     "dozer"
@@ -162,6 +161,9 @@ localMacOSSetup() {
   #Only show open apps in the dock; remove everything else
   defaults write com.apple.dock static-only -bool true
 
+  #Show all hidden files/folders in Finder
+  defaults write com.apple.finder AppleShowAllFiles YES
+
   #Auto-hide dock
   defaults write com.apple.dock autohide -bool true
 
@@ -173,6 +175,8 @@ localMacOSSetup() {
   #restart dock process
   killall Dock
 }
+
+
 
 homebrewInstall() {
   if [[ $(command -v brew) == "" ]]; then
