@@ -96,7 +96,7 @@ atomExtras() {
 }
 
 shellSetup() {
-  #The following will start the setup for local shell preferences (zsh)
+  #The following will start the setup for local shell preferences (oh-my-zsh)
   #iTerm2 is installed in the cask list in the caskInstaller function
   
   #Do we have git installed?
@@ -112,21 +112,16 @@ shellSetup() {
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
   #Download iTerm theme
-  mkdir ~/iTermSetup
   # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
-  curl -L -o ~/iTermSetup/halcyon.itermcolors https://raw.githubusercontent.com/bchiang7/halcyon-iterm/master/halcyon.itermcolors
   
-  #Download personal iTerm2 Config (Import from Preferences > General > Preferences > Load from custom folder)
-  curl -L -o ~/iTermSetup/com.googlecode.iterm2.plist https://raw.githubusercontent.com/leblanck/bustit/master/resources/com.googlecode.iterm2.plist
+  cd ~/repos
   #Download personal iTerm2 theme (based on Gruvbox) (Possibly not needed it above plist is imported correctly)
-  curl -L -o ~/iTermSetup/kl_gruv.itermcolors https://raw.githubusercontent.com/leblanck/bustit/master/resources/kl_gruv.itermcolors
+  git clone https://github.com/leblanck/gruvbox_iterm_theme.git
 
   #VSCODE Theme
   #https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox
 
   #Install Powerline Font pack
-  mkdir ~/repos
-  cd ~/repos
   git clone https://github.com/powerline/fonts.git --depth=1
   cd fonts
   ./install.sh
@@ -167,10 +162,8 @@ localMacOSSetup() {
   #Auto-hide dock
   defaults write com.apple.dock autohide -bool true
 
-  #Download new wallpaper
-  curl -L -o ~/Pictures/wallpaper.png https://raw.githubusercontent.com/leblanck/bustit/master/wallpaper.png
   #Set new wallpaper
-  osascript -e ‘tell application "System Events" to tell every desktop to set picture to "~/Pictures/wallpaper.png"’
+  osascript -e ‘tell application "System Events" to tell every desktop to set picture to "~/repos/redpoint/resources/wallpaper.png"’
 
   #restart dock process
   killall Dock
