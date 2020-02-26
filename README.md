@@ -1,4 +1,4 @@
-Bust IT - new env set-up for macOS
+RedPoint - new env set-up for macOS
 ======
 
 #### Why?
