@@ -1,0 +1,32 @@
+# Taps
+tap 'homebrew/cask'
+tap 'homebrew/fonts'
+tap 'cjbassi/gotop'
+
+# Binaries
+brew 'pwgen'
+brew 'gotop'
+brew 'khanhas/tap/spicetify-cli'
+brew 'npm'
+brew 'neofetch'
+brew 'tree'
+
+# Apps
+cask '1password'
+cask 'adobe-creative-cloud'
+cask 'atom'
+cask 'clipy'
+cask 'dozer'
+cask 'firefox'
+cask 'fliqlo'
+cask 'font-hack'
+cask 'iterm2'
+cask 'itsycal'
+cask 'messenger'
+cask 'notion'
+cask 'sketch'
+cask 'slack'
+cask 'spotify'
+cask 'visual-studio-code'
+cask 'wireshark'
+cask 'xnviewmp'
