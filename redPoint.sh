@@ -112,28 +112,7 @@ shellSetup() {
 }
 
 localMacOSSetup() {
-  #The following will setup local macOS preferences (Wallpaper, Dock Settings, etc)
-  # Set Dark Mode
-  osascript -e 'tell application "System Events"
-      tell appearance preferences
-          set dark mode to true
-      end tell
-  end tell'
-
-  #Only show open apps in the dock; remove everything else
-  defaults write com.apple.dock static-only -bool true
-
-  #Show all hidden files/folders in Finder
-  defaults write com.apple.finder AppleShowAllFiles YES
-
-  #Auto-hide dock
-  defaults write com.apple.dock autohide -bool true
-
-  #Set new wallpaper
-  osascript -e ‘tell application "System Events" to tell every desktop to set picture to "~/repos/redpoint/resources/wallpaper.png"’
-
-  #restart dock process
-  killall Dock
+    source $repoDir/redpoint/resources/dotfiles/.macos
 }
 
 spotifyConfig() {
