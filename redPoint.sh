@@ -6,7 +6,7 @@
 #   Cask WishList is located    #
 #   below this description.     #
 #                               #
-#   Last Update: 02/26/2020     #
+#   Last Update: 02/27/2020     #
 #################################
 # Cask WishList/To Do           #
 #                               #
@@ -14,66 +14,27 @@
 #  Cask list available using:   #
 #     brew search --casks       #
 #################################
+###VSCODE Notes: Listed below are used themes/extensions. Would like to script this somehow...
+  #VSCODE Theme:     https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox
+  #VSCODE Extensions~~~
+  #Terraform:       https://marketplace.visualstudio.com/items?itemName=mauve.terraform
+  #Go:              https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go
+  #Material Icons:  https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+  #PropertyList:    https://marketplace.visualstudio.com/items?itemName=zhouronghui.propertylist
 
-#@@@@@@@@@@@@ MAIN @@@@@@@@@@@@
+#### VARIABLES ####
+loggedInUser=$(stat -f %Su /dev/console)
+repoDir=/Users/$loggedInUser/repos
+logFile=/Users/$loggedInUser/Library/Logs/redPoint.log
+###################
 
-# LOG ##########################################
-LogFile="/Library/Logs/redPoint.log"
-if [[ ! -e $LogFile ]]; then
-    sudo touch $LogFile && sudo exec >> $LogFile
-    echo "`date` ========== Log File Created"
-else
-    sudo exec >> $LogFile
-fi
-###############################################
-
-caskInstaller() {
-  # This will iterate through cask installs, only stopping when a trigger is hit to execute
-  # additional commands for that specific installer.
-  # To add additional casks, add them into $casks array.
-  declare -a casks=(
-    "spectacle"
-    "wireshark"
-    "font-hack"
-    "clipy"
-    "firefox"
-    "atom"
-    "spotify"
-    "slack"
-    "iterm2"
-    "zeplin"
-    "dozer"
-    "figma"
-    "messenger"
-    "itsycal"
-    "dropbox"
-    "sketch"
-    "visual-studio-code"
-    "xnviewmp"
-    "fliqlo"
-  )
-  atomTrigger="atom"
-  adobeTrigger="adobe-creative-cloud"
-
-  for i in "${casks[@]}"
-  do
-    if [ "$i" == "$atomTrigger" ]; then
-      #Triggered when current cask = Atom
-      echo "`date` Installing" $i"..."
-      brew cask install $i
-      atomExtras
-    elif [ "$i" == "$adobeTrigger" ]; then
-      #Triggered when current cask = Adobe CC
-      echo "`date ` Installing" $i"..."
-      brew cask install $1
-      sleep 5
-      open -a /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
+logging() {
+    if [[ ! -e $logFile ]]; then
+        touch $logFile && exec >> $logFile
+        echo "`date` ========== Log File Created =========="
     else
-      #All other casks
-      echo "`date` Installing" $i"..."
-      brew cask install $i
+        exec >> $logFile
     fi
-  done
 }
 
 atomExtras() {
@@ -95,57 +56,63 @@ atomExtras() {
   ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 }
 
+fonts() {
+    #Install Powerline Font pack
+    cd ~/repos
+    git clone https://github.com/powerline/fonts.git --depth=1
+    cd fonts
+    ./install.sh
+    cd ..
+    rm -rf fonts
+  
+    #Download Cascadia Font
+    curl -L -o ~/repos/Cascadia.ttf https://github.com/microsoft/cascadia-code/releases/download/v1910.04/Cascadia.ttf
+}
+
 shellSetup() {
-  #The following will start the setup for local shell preferences (oh-my-zsh)
-  #iTerm2 is installed in the cask list in the caskInstaller function
-  
-  #Do we have git installed?
-  if [[ $(command -v git) == "" ]]; then
-    echo "Installing git..."
-    git
-  else
-    echo "Git is installed; Running version: "
-    git --version
-  fi
-  
-  #Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    #The following will start the setup for local shell preferences (oh-my-zsh)
+    #iTerm2 is installed in the cask list in the caskInstaller function
+    
+    #Do we have git installed?
+    if [[ $(command -v git) == "" ]]; then
+        echo "Installing git..."
+        git
+    else
+        echo "Git is installed; Running version: "
+        git --version
+    fi
+    
+    #Install oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-  #Download iTerm theme
-  # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
-  
-  cd ~/repos
-  #Download personal iTerm2 theme (based on Gruvbox) (Possibly not needed it above plist is imported correctly)
-  git clone https://github.com/leblanck/gruvbox_iterm_theme.git
+    #If repos doesn't exist make it 
+    if [ -d $repoDir ]; then
+        cd $repoDir
+    else
+        mkdir $repoDir
+        cd $repoDir
+    fi
 
-  #VSCODE Theme
-  #https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox
+    #Download iTerm theme
+    # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
+        ## Set Font and Non-ASCII font to Hack 12pt Reg (iTerm2 > Preferences > Profiles > Text) 
+    git clone https://github.com/leblanck/gruvbox_iterm_theme.git
 
-  #Install Powerline Font pack
-  git clone https://github.com/powerline/fonts.git --depth=1
-  cd fonts
-  ./install.sh
-  cd ..
-  rm -rf fonts
-  
-  #Download Cascadia Font
-  curl -L -o ~/Cascadia.ttf https://github.com/microsoft/cascadia-code/releases/download/v1910.04/Cascadia.ttf
-  
-  #The following is option/personal preference (to be scripted eventually):
-  ## Set Font and Non-ASCII font to Hack 12pt Reg (iTerm2 > Preferences > Profiles > Text)
-  ## Add alias's to ~/.zshrc
-  ##    alias home="cd ~/"
-  ##    alias ls="ls -la"
-  ## Add plugins to ~/.zshrc
-  ##    plugins=(git extract osx)
-  ## Change zsh prompt theme in ~/.zshrc to agnoster (ZSH_THEME="agnoster")
-  ## Change agnoster theme prompt context (~/.oh-my-zsh/themes/agnoster.zsh-theme : line 92) to the following:
-  ##    prompt_segment black default "%(!.%{%F{yellow}%}.)this ➡"
+    #Symlink all dotfiles
+    echo "`date` Linking all dotfiles..."
+    ln -sv ~/repos/redpoint/resources/dotfiles/.zshrc ~
+    ln -sv ~/repos/redpoint/resources/dotfiles/.gitconfig ~
+    ln -sv ~/repos/redpoint/resources/dotfiles/.gitignore_global ~
+    ln -sv ~/repos/redpoint/resources/agnoster.zsh_theme ~/.oh-my-zsh/themes/
+    sleep 1
+
+    echo "`date` Installing CLI Trash..."
+    npm install --global trash-cli
+    sleep 5
 }
 
 localMacOSSetup() {
   #The following will setup local macOS preferences (Wallpaper, Dock Settings, etc)
-
   # Set Dark Mode
   osascript -e 'tell application "System Events"
       tell appearance preferences
@@ -169,61 +136,53 @@ localMacOSSetup() {
   killall Dock
 }
 
-
-
-homebrewInstall() {
-  if [[ $(command -v brew) == "" ]]; then
-    echo "Installing Hombrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  else
-    echo "Updating Homebrew"
-    brew update
-  fi
-    sleep 5
-    echo "`date` Tapping Cask..."
-    brew tap homebrew/cask
-    sleep 5
-    brew tap homebrew/cask-fonts
-    sleep 5
-    brew tap cjbassi/gotop
-    sleep 5
-    echo "`date` Installing Apps..."
-    caskInstaller
-    sleep 5
-    echo "`date` Installing PWGen..."
-    brew install pwgen
-    sleep 5
-    #echo "`date` Installing Hugo..."
-    #brew install hugo
-    #sleep 5
-    echo "`date` Installing GoTop..."
-    brew install gotop
-    sleep 5
-    xcode-select --install
-    echo "`date` Installing neofetch..."
-    brew install neofetch
-    sleep 5
-    echo "`date` Installing Spicetify..."
-    brew install khanhas/tap/spicetify-cli
-    sleep 5
+spotifyConfig() {
     spicetify backup apply enable-devtool
-    sleep 5
-    echo "`date` Installing npm..."
-    brew install npm
-    sleep 5
-    #echo "`date` Installing Firebase..."
-    #npm install -g firebase-tools
-    #sleep 5
-    echo "`date` Setting up shell preferences..."
-    shellSetup
-    sleep 5
-    echo "`date` Installing CLI Trash..."
-    npm install --global trash-cli
-    sleep 5
-    echo "`date` Setting up macOS local preferences..."
-    localMacOSSetup
-    sleep 5
-    echo "`date` Done!"
+    cd ~/spicetify_data/Themes
+    git clone https://github.com/morpheusthewhite/spicetify-themes.git
+    spicetify config current_theme Gruvbox-Gold
+    spicetify apply
 }
 
+homebrewInstall() {
+    if [[ $(command -v brew) == "" ]]; then
+        echo "Installing Hombrew"
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    else
+        echo "Updating Homebrew"
+        brew update
+    fi
+
+    brew tap homebrew/bundle
+    brew bundle --file ./resources/Brewfile
+    
+    sleep 5
+}
+
+echo "`date` Setting up logging..."
+echo "`date` View $logFile for further output..."
+logging
+
+echo "`date` Please wait; Installing Xcode tools..."
+xcode-select --install
+sleep 240
+
+echo "`date` Installing homebrew and apps..."
 homebrewInstall
+
+echo "`date` Getting Atom extras..."
+atomExtras
+
+echo "`date` Installing fonts..."
+fonts
+
+echo "`date` Setting up Spotify..."
+spotifyConfig
+
+echo "`date` Setting up shell preferences..."
+shellSetup
+
+echo "`date` Setting up macOS local preferences..."
+localMacOSSetup
+
+echo "`date` Done!"
