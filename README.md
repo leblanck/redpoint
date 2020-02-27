@@ -1,16 +1,20 @@
 RedPoint - new env set-up for macOS
 ======
+![GitHub issues](https://img.shields.io/github/issues-raw/leblanck/redpoint.svg)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 #### Why?
 This is target toward UX/WebDevs (myself) mostly. I was fed up with installing the same apps constantly when moving to a new macOS box. 
 
 #### How to use:
-1. Clone Repo
-2. Change permissions on file to allow exec `sudo chmod +x`
-3. run using `./bustIT.sh`
+1. Run `mkdir ~/repos`
+2. Clone Repo
+3. Change permissions on file to allow exec `sudo chmod +x`
+4. run using `./redPoint.sh`
 
 #### What does this do?
-1. Setup Logging to: `/Library/Logs/bustIT.log`
+1. Setup Logging to: `/Library/Logs/redPoint.log`
 2. Installs the following apps
 * Sketch
 * Figma
