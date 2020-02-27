@@ -1,4 +1,4 @@
-<p align="center"><img width=12.5% src="https://github.com/leblanck"></p>
+<p align="center"><img width=25% src="https://raw.githubusercontent.com/leblanck/leblanck.github.io/master/img/arrow.png"></p>
 <p align="center"><img width=60% src="https://github.com/leblanck"></p>
 
 
