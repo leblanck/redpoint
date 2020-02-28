@@ -1,6 +1,6 @@
 # Taps
 tap 'homebrew/cask'
-tap 'homebrew/fonts'
+tap 'homebrew/cask-fonts'
 tap 'cjbassi/gotop'
 
 # Binaries

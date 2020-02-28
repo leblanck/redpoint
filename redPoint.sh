@@ -14,13 +14,6 @@
 #  Cask list available using:   #
 #     brew search --casks       #
 #################################
-###VSCODE Notes: Listed below are used themes/extensions. Would like to script this somehow...
-  #VSCODE Theme:     https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox
-  #VSCODE Extensions~~~
-  #Terraform:       https://marketplace.visualstudio.com/items?itemName=mauve.terraform
-  #Go:              https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go
-  #Material Icons:  https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
-  #PropertyList:    https://marketplace.visualstudio.com/items?itemName=zhouronghui.propertylist
 
 #### VARIABLES ####
 loggedInUser=$(stat -f %Su /dev/console)
@@ -67,6 +60,28 @@ fonts() {
   
     #Download Cascadia Font
     curl -L -o ~/repos/Cascadia.ttf https://github.com/microsoft/cascadia-code/releases/download/v1910.04/Cascadia.ttf
+}
+
+vscodeSetup() {
+    declare -a extensions=(
+                        "dnicolson.binary-plist"
+                        "jdinhlife.gruvbox"
+                        "mauve.terraform"
+                        "ms-vscode.Go"
+                        "PKief.material-icon-theme"
+                        "zhouronghui.propertylist"
+                        )
+
+    if [[ $(command -v code) == "" ]]; then
+        echo "============= `date` Either VSCode is not installed or CLI Tools are missing..."
+        echo "============= `date` Aborting VSCode Extension Setup!"
+    else
+        echo "============= `date` VSCode Found; Installing Extensions..."
+        for i in ${!extensions[@]};
+        do
+            code --install-extension ${extensions[$i]}
+        done
+    fi
 }
 
 shellSetup() {
@@ -154,6 +169,7 @@ echo "============= `date` Installing Atom extras..."
 atomExtras
 
 echo "============= `date` Installing VS Code Extensions"
+vscodeSetup
 
 echo "============= `date` Installing fonts..."
 fonts
