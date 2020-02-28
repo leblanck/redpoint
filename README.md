@@ -15,9 +15,6 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 2. Clone Repo: `git clone https://github.com/leblanck/redpoint.git`
 3. run using `./redPoint.sh`
            
-
-
-
 #### What does this do?
 1. Setup Logging to: `~/Library/Logs/redPoint.log`
 2. Installs Xcode Command Line Tools
@@ -41,7 +38,7 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | gotop             | npm      |
 | spicetify-cli     | neofetch |
 
-3. Installs Extras for Atom (including CLI Tools):
+4. Installs Extras for Atom (including CLI Tools):
 
 | Themes:                   | Extensions:      |                
 | :------------------------ | :--------------- |
@@ -50,7 +47,19 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | apple-wwdc-2016-syntax    | pigments         |
 | gruvbox                   |
 
-8. Installs [Trash](https://github.com/sindresorhus/trash)
+5. Installs Extensions for VS Code:
+
+| Extensions:               |                           |
+| :------------------------ | :-------------------------|
+| dnicolson.binary-plist    | PKief.material-icon-theme |
+| jdinhlife.gruvbox         | zhouronghui.propertylist  |
+| mauve.terraform           | ms-vscode.Go              |
 
 11. Sets up local shell preferences
+  * Install/update Git
+  * Install Oh-My-Zsh
+  * Downloads [Gruvbox](https://github.com/leblanck/gruvbox_iterm_theme.git) iTerm theme
+  * Symlink all dotiles from `redpoint/resources/dotfiles` to `~`
+  * Installs [Trash](https://github.com/sindresorhus/trash) from npm
+  
 12. Sets up local macOS preferences
