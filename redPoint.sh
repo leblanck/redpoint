@@ -103,7 +103,7 @@ shellSetup() {
     ln -sv ~/repos/redpoint/resources/dotfiles/.zshrc ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitconfig ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitignore_global ~
-    ln -sv ~/repos/redpoint/resources/agnoster.zsh_theme ~/.oh-my-zsh/themes/
+    ln -sv ~/repos/redpoint/resources/agnoster.zsh_theme ~/.oh-my-zsh/themes
     git config --global core.excludesfile ~/.gitignore_global
     sleep 1
 
