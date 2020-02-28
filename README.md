@@ -13,30 +13,24 @@ This is target toward UX/WebDevs (myself) mostly. I was fed up with installing t
 2. Clone Repo
 3. Change permissions on file to allow exec `sudo chmod +x`
 4. run using `./redPoint.sh`
+           
+
+
 
 #### What does this do?
 1. Setup Logging to: `/Library/Logs/redPoint.log`
 2. Installs the following apps
-* Sketch
-* Figma
-* Dropbox
-* Atom
-* Adobe Creative Cloud
-* Fliqlo
-* iTerm2
-* Dozer
-* Hack Font
-* Zeplin
-* Spectacle
-* Clipy
-* Github Desktop
-* Wireshark
-* Slack
-* Spotify
-* Spicetify
-* Visual Studio Code
-* Messenger
-* XnViewMP
+
+
+| Installs macOS Apps:     |                   |                   |                 |
+| :----------------------- | :-------------    | :-----------------| :---------------|
+| 1Password                | Adobe CC          | Atom              | Clipy           |
+| Dozer                    | Firefox           | Fliqlo            | iTerm2          |
+| Itsycal                  | Messenger         | Notion            | Sketch          |
+| Slack                    | Spotify           | VS Code           | Wireshark       |
+| Xnviewmp     
+
+
 3. Installs Themes for Atom:
 * firewatch-syntax
 * halcyon-syntax
