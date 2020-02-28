@@ -19,20 +19,29 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 
 
 #### What does this do?
-1. Setup Logging to: `/Library/Logs/redPoint.log`
-2. Installs the following apps
-
-
-| Installs macOS Apps:     |                   |                   |                 |
+1. Setup Logging to: `~/Library/Logs/redPoint.log`
+2. Installs Xcode Command Line Tools
+3. Sets up homebrew:
+ * Installs or Updates brew
+ * Installs macOS Apps:
+ 
+| macOS Apps:              |                   |                   |                 |
 | :----------------------- | :-------------    | :-----------------| :---------------|
 | 1Password                | Adobe CC          | Atom              | Clipy           |
 | Dozer                    | Firefox           | Fliqlo            | iTerm2          |
 | Itsycal                  | Messenger         | Notion            | Sketch          |
 | Slack                    | Spotify           | VS Code           | Wireshark       |
 | Xnviewmp     
+ 
+ * Installs binaries:
+ 
+| binaries:         |          |                
+| :---------------- | :------- |
+| pwgen             | tree     |  
+| gotop             | npm      |
+| spicetify-cli     | neofetch |
 
-
-3. Installs Themes for Atom:
+3. Installs Extras for Atom:
 * firewatch-syntax
 * halcyon-syntax
 * apple-wwdc-2016-syntax
