@@ -39,20 +39,20 @@ logging() {
 
 atomExtras() {
   #Install Atom Themes
-  echo "`date` Installing Atom themes.."
+  echo "============= `date` Installing Atom themes.."
   apm install apple-wwdc-2016-syntax
   apm install firewatch-syntax
   apm install gruvbox
   apm install halcyon-syntax
 
   #Install Atom Packages
-  echo "`date` Installing Atom packages..."
+  echo "============= `date` Installing Atom packages..."
   apm install file-icons
   apm install minimap
   apm install pigments
 
   #CLI Tools
-  echo "`date` Installing Atom CLI Tools..."
+  echo "============= `date` Installing Atom CLI Tools..."
   ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 }
 
@@ -75,10 +75,10 @@ shellSetup() {
     
     #Do we have git installed?
     if [[ $(command -v git) == "" ]]; then
-        echo "Installing git..."
+        echo "============= `date` Installing git..."
         git
     else
-        echo "Git is installed; Running version: "
+        echo "============= `date` Git is installed; Running version: "
         git --version
     fi
     
@@ -99,7 +99,7 @@ shellSetup() {
     git clone https://github.com/leblanck/gruvbox_iterm_theme.git
 
     #Symlink all dotfiles
-    echo "`date` Linking all dotfiles..."
+    echo "============= `date` Linking all dotfiles..."
     ln -sv ~/repos/redpoint/resources/dotfiles/.zshrc ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitconfig ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitignore_global ~
@@ -107,7 +107,7 @@ shellSetup() {
     git config --global core.excludesfile ~/.gitignore_global
     sleep 1
 
-    echo "`date` Installing CLI Trash..."
+    echo "============= `date` Installing CLI Trash..."
     npm install --global trash-cli
     sleep 5
 }
@@ -139,30 +139,32 @@ homebrewInstall() {
     sleep 5
 }
 
-echo "`date` Setting up logging..."
-echo "`date` View $logFile for further output..."
+echo "============= `date` Setting up logging..."
+echo "============= `date` View $logFile for further output..."
 logging
 
-echo "`date` Please wait; Installing Xcode tools..."
+echo "============= `date` Please wait; Installing Xcode tools..."
 xcode-select --install
 sleep 240
 
-echo "`date` Installing homebrew and apps..."
+echo "============= `date` Installing homebrew and apps..."
 homebrewInstall
 
-echo "`date` Getting Atom extras..."
+echo "============= `date` Installing Atom extras..."
 atomExtras
 
-echo "`date` Installing fonts..."
+echo "============= `date` Installing VS Code Extensions"
+
+echo "============= `date` Installing fonts..."
 fonts
 
-echo "`date` Setting up Spotify..."
+echo "============= `date` Setting up Spotify..."
 spotifyConfig
 
-echo "`date` Setting up shell preferences..."
+echo "============= `date` Setting up shell preferences..."
 shellSetup
 
-echo "`date` Setting up macOS local preferences..."
+echo "============= `date` Setting up macOS local preferences..."
 localMacOSSetup
 
-echo "`date` Done!"
+echo "============= `date` Done!"
