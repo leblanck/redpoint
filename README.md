@@ -41,30 +41,16 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | gotop             | npm      |
 | spicetify-cli     | neofetch |
 
-3. Installs Extras for Atom:
-* firewatch-syntax
-* halcyon-syntax
-* apple-wwdc-2016-syntax
-* gruvbox
-4. Installs Packages for Atom:
-* file-icons
-* minimap
-* pigments
-5. Installs Atom CLI Tools
-6. Installs PWGen
-7. Installs npm
+3. Installs Extras for Atom (including CLI Tools):
+
+| Themes:                   | Extensions:      |                
+| :------------------------ | :--------------- |
+| firewatch-syntax          | file-icons       |  
+| halcyon-syntax            | minimap          |
+| apple-wwdc-2016-syntax    | pigments         |
+| gruvbox                   |
+
 8. Installs [Trash](https://github.com/sindresorhus/trash)
-9. Installs GoTop
-10. Installs neofetch
-11. Sets up local zsh shell
+
+11. Sets up local shell preferences
 12. Sets up local macOS preferences
-
-###### Alternate Download
-```bash
-curl -L -o bustIT.sh https://raw.githubusercontent.com/leblanck/bustit/master/bustIT.sh
-```
-OR (may be outdated)
-
-```bash
-curl -L -o bustIT.sh https://leblanck.github.io/bustIT.sh
-```
