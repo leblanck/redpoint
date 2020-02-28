@@ -6,13 +6,14 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 #### Why?
-This is target toward UX/WebDevs (myself) mostly. I was fed up with installing the same apps constantly when moving to a new macOS box. 
+tl/dr; The need for setting up a new system using dotfiles and an installation script in minutes.
 
-#### How to use:
-1. Run `mkdir ~/repos`
-2. Clone Repo
-3. Change permissions on file to allow exec `sudo chmod +x`
-4. run using `./redPoint.sh`
+This repository serves as my way to help me setup and maintain my Mac(s). It takes the effort out of installing everything manually, as well as keep any .dotfiles up-to-date across Macs by just updating the repo locally. Everything needed to install my preferred setup of macOS is detailed in this readme. Enjoy! 😄
+
+#### Install/Run:
+1. Run `mkdir ~/repos && cd ~/repos`
+2. Clone Repo: `git clone https://github.com/leblanck/redpoint.git`
+3. run using `./redPoint.sh`
            
 
 
