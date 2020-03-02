@@ -25,10 +25,10 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | macOS Apps:              |                   |                   |                 |
 | :----------------------- | :-------------    | :-----------------| :---------------|
 | 1Password                | Adobe CC          | Atom              | Clipy           |
-| Dozer                    | Firefox           | Fliqlo            | iTerm2          |
-| Itsycal                  | Messenger         | Notion            | Sketch          |
-| Slack                    | Spotify           | VS Code           | Wireshark       |
-| Xnviewmp     
+| Docker                   | Dozer             | Firefox           | Fliqlo          |
+| iTerm2                   | Itsycal           | Messenger         | Notion          | 
+| Sketch                   | Slack             | Spotify           | VS Code         | 
+| Wireshark                | Xnviewmp          |                   |                 |  
  
  * Installs binaries:
  
