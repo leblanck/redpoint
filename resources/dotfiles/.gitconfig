@@ -1,3 +1,5 @@
 [user]
 	email = kyle.paul.leblanc@gmail.com
 	name = Kyle LeBlanc
+[core]
+	excludesfile = /Users/kleblanc/.gitignore_global
