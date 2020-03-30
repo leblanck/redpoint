@@ -32,11 +32,11 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
  
  * Installs binaries:
  
-| binaries:         |          |                
-| :---------------- | :------- |
-| pwgen             | tree     |  
-| gotop             | npm      |
-| spicetify-cli     | neofetch |
+| binaries:         |          |              |       
+| :---------------- | :------- |:-------------|
+| pwgen             | tree     | Firebase CLI |
+| gotop             | npm      | Hugo         |
+| spicetify-cli     | neofetch |              |
 
 4. Installs Extras for Atom (including CLI Tools):
 
