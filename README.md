@@ -63,3 +63,5 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
   * Installs [Trash](https://github.com/sindresorhus/trash) from npm
   
 12. Sets up local macOS preferences
+
+This is free to use, edit, change, learn from, but you enjoy this, feel free to [buy me a coffee!](https://www.buymeacoffee.com/kyleblanc)
