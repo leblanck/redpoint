@@ -57,13 +57,13 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | jdinhlife.gruvbox         | zhouronghui.propertylist  |
 | mauve.terraform           | ms-vscode.Go              |
 
-11. Sets up local shell preferences
+11. Sets up local shell preferences:
   * Install/update Git
   * Install Oh-My-Zsh
   * Downloads [Gruvbox](https://github.com/leblanck/gruvbox_iterm_theme.git) iTerm theme
   * Symlink all dotiles from `redpoint/resources/dotfiles` to `~`
   * Installs [Trash](https://github.com/sindresorhus/trash) from npm
   
-12. Sets up local macOS preferences
+12. Sets up local macOS preferences.
 
 This is free to use, edit, change, learn from, but you enjoy this, feel free to [buy me a coffee!](https://www.buymeacoffee.com/kyleblanc)
