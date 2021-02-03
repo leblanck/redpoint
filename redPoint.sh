@@ -6,7 +6,7 @@
 #   Cask WishList is located    #
 #   below this description.     #
 #                               #
-#   Last Update: 02/27/2020     #
+#   Last Update: 02/03/2021     #
 #################################
 # Cask WishList/To Do           #
 #                               #
@@ -107,10 +107,12 @@ shellSetup() {
         mkdir $repoDir
         cd $repoDir
     fi
-
-    #Download iTerm theme
-    # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
-        ## Set Font and Non-ASCII font to Hack 12pt Reg (iTerm2 > Preferences > Profiles > Text) 
+    
+    #INSTALL ITERM JSON THEME FROM THIS REPO (iterm_profile.json; iTerm2 > Preferences > Profiles > Other Actions > Import JSON Profile)
+    
+    #Download iTerm theme (as backup)
+     # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
+      ## Set Font and Non-ASCII font to Hack Nerd Font Mono 12pt Reg (iTerm2 > Preferences > Profiles > Text) 
     git clone https://github.com/leblanck/gruvbox_iterm_theme.git
     
     #Download Powerlevel10k ZSH Theme
