@@ -112,6 +112,10 @@ shellSetup() {
     # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
         ## Set Font and Non-ASCII font to Hack 12pt Reg (iTerm2 > Preferences > Profiles > Text) 
     git clone https://github.com/leblanck/gruvbox_iterm_theme.git
+    
+    #Download Powerlevel10k ZSH Theme
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    
 
     #Symlink all dotfiles
     echo "============= `date` Linking all dotfiles..."
@@ -119,7 +123,8 @@ shellSetup() {
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitconfig ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitignore_global ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.profile ~
-    ln -sv ~/repos/redpoint/resources/agnoster.zsh_theme ~/.oh-my-zsh/themes
+    ln -sv ~/repos/redpoint/resources/dotfiles/.p10k.zsh ~
+    #ln -sv ~/repos/redpoint/resources/agnoster.zsh_theme ~/.oh-my-zsh/themes
     git config --global core.excludesfile ~/.gitignore_global
     sleep 1
 
