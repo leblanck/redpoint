@@ -4,7 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'cjbassi/gotop'
 
 # Binaries
-brew 'firebase-cli'
+# brew 'firebase-cli' no longer in use
 brew 'pwgen'
 brew 'gotop'
 brew 'hugo'
