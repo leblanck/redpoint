@@ -12,6 +12,8 @@ brew 'khanhas/tap/spicetify-cli'
 brew 'npm'
 brew 'neofetch'
 brew 'tree'
+brew 'ruby' #for Jekyll Dev
+brew 'rbenv' #for Jekyll Dev
 
 # Apps
 cask '1password'
