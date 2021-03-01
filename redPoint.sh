@@ -70,6 +70,11 @@ vscodeSetup() {
                         "ms-vscode.Go"
                         "PKief.material-icon-theme"
                         "zhouronghui.propertylist"
+                        "golang.go"
+                        "hashicorp.terraform"
+                        "aws-scripting-guy.cform"
+                        "redhat.vscode-yaml"
+                        "amazonwebservices.aws-toolkit-vscode"
                         )
 
     if [[ $(command -v code) == "" ]]; then
