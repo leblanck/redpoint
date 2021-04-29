@@ -196,4 +196,7 @@ shellSetup
 echo "============= `date` Setting up macOS local preferences..."
 localMacOSSetup
 
+echo "============= `date` Downloading Corsair Drivers to Desktop..."
+curl -L -o ~/Desktop/Corsair_iCUE.dmg https://downloads.corsair.com/Files/CUE/iCUE-3.38.61-release.dmg
+
 echo "============= `date` Done!"
