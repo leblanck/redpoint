@@ -29,8 +29,8 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | 1Password                | Adobe CC          | Atom              | Clipy           |
 | Docker                   | Dozer             | Firefox           | Fliqlo          |
 | iTerm2                   | Itsycal           | Messenger         | Notion          | 
-| Rocket                   | Sketch            | Slack             | Spotify         |
-| VS Code                  | Wireshark         | Xnviewmp          |                 |  
+| Rectangle                | Rocket            | Sketch            | Slack           | 
+| Spotify                  | VS Code           | Wireshark         | Xnviewmp        |
  
  * Installs binaries:
  
@@ -38,7 +38,8 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | :---------------- | :------- |:-------------|
 | pwgen             | tree     | Firebase CLI |
 | gotop             | npm      | Hugo         |
-| spicetify-cli     | neofetch |              |
+| spicetify-cli     | neofetch | Ruby         |
+| rbenv             |          |              |
 
 4. Installs Extras for Atom (including CLI Tools):
 
@@ -60,10 +61,12 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 11. Sets up local shell preferences:
   * Install/update Git
   * Install Oh-My-Zsh
+  * Installs PowerLevel10k zsh Theme
   * Downloads [Gruvbox](https://github.com/leblanck/gruvbox_iterm_theme.git) iTerm theme
   * Symlink all dotiles from `redpoint/resources/dotfiles` to `~`
   * Installs [Trash](https://github.com/sindresorhus/trash) from npm
   
 12. Sets up local macOS preferences.
+  * Dowloads Corsair iCUE Drivers to the Desktop for install.
 
 This is free to use, edit, change, learn from, but you enjoy this, feel free to [buy me a coffee!](https://www.buymeacoffee.com/kyleblanc)
