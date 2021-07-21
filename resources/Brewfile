@@ -2,6 +2,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'cjbassi/gotop'
+tap 'teamookla/speedtest'
 
 # Binaries
 # brew 'firebase-cli' no longer in use
@@ -11,6 +12,7 @@ brew 'hugo'
 brew 'khanhas/tap/spicetify-cli'
 brew 'npm'
 brew 'neofetch'
+brew 'speedtest'
 brew 'tree'
 brew 'ruby' #for Jekyll Dev
 brew 'rbenv' #for Jekyll Dev
