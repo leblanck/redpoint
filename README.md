@@ -38,8 +38,8 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | :---------------- | :------- |:-------------|
 | pwgen             | tree     | Firebase CLI |
 | gotop             | npm      | Hugo         |
-| spicetify-cli     | neofetch | Ruby         |
-| rbenv             |          |              |
+| spicetify-cli     | speedtest| neofetch     |
+| Ruby              |rbenv     |              |
 
 4. Installs Extras for Atom (including CLI Tools):
 
