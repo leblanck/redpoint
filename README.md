@@ -1,10 +1,14 @@
+
 <p align="center"><img width=25% src="https://raw.githubusercontent.com/leblanck/leblanck.github.io/master/img/arrow.png"></p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![GitHub issues](https://img.shields.io/github/issues-raw/leblanck/redpoint.svg)](https://github.com/leblanck/redpoint/issues)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
+<div align="center">
 
+<a href="">![GitHub issues](https://img.shields.io/github/issues-raw/leblanck/redpoint.svg)</a>
+<a href="">![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)</a>
+<a href="">![License](https://img.shields.io/badge/license-MIT-blue.svg)</a>
+<a href="">![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)</a>
+
+</div>
 
 #### Why?
 tl/dr; The need for setting up a new system using dotfiles and an installation script in minutes.
