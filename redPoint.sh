@@ -135,6 +135,7 @@ shellSetup() {
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitconfig ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.gitignore_global ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.profile ~
+    ln -sv ~/repos/redpoint/resources/dotfiles/.vimrc ~
     ln -sv ~/repos/redpoint/resources/dotfiles/.p10k.zsh ~
     #ln -sv ~/repos/redpoint/resources/agnoster.zsh_theme ~/.oh-my-zsh/themes
     git config --global core.excludesfile ~/.gitignore_global
@@ -143,6 +144,13 @@ shellSetup() {
     echo "============= `date` Installing CLI Trash..."
     npm install --global trash-cli
     sleep 5
+}
+
+vimSetup() {
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    #Open vim and run :PlugInstall command
 }
 
 localMacOSSetup() {

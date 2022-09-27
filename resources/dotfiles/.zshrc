@@ -108,8 +108,8 @@ alias home="cd ~/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kleblanc/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kleblanc/Downloads/google-cloud-sdk/path.zsh.inc'; fi
