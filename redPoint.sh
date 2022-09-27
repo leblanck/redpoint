@@ -149,14 +149,6 @@ localMacOSSetup() {
     source $repoDir/redpoint/resources/dotfiles/.macos
 }
 
-spotifyConfig() {
-    spicetify backup apply enable-devtool
-    cd ~/spicetify_data/Themes
-    git clone https://github.com/morpheusthewhite/spicetify-themes.git
-    spicetify config current_theme Gruvbox-Gold
-    spicetify apply
-}
-
 homebrewInstall() {
     if [[ $(command -v brew) == "" ]]; then
         echo "Installing Hombrew"
@@ -191,9 +183,6 @@ vscodeSetup
 
 echo "============= `date` Installing fonts..."
 fonts
-
-echo "============= `date` Setting up Spotify..."
-spotifyConfig
 
 echo "============= `date` Setting up shell preferences..."
 shellSetup
