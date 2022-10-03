@@ -13,7 +13,7 @@
 #### Why?
 tl/dr; The need for setting up a new system using dotfiles and an installation script in minutes.
 
-This repository serves as my way to help me setup and maintain my Mac(s). It takes the effort out of installing everything manually, as well as keep any .dotfiles up-to-date across Macs by just updating the repo locally. Everything needed to install my preferred setup of macOS is detailed in this readme. Enjoy! 😄
+This repository serves as my way to help me setup and maintain my Mac(s). It takes the effort out of installing everything manually, as well as keep any .dotfiles up-to-date across Macs by just updating the repo locally. As time goes on, this is being tailored to more specifically target Python development and my own personal tastes. Enjoy! 😄
 
 #### Install/Run:
 1. Run `mkdir ~/repos && cd ~/repos`
