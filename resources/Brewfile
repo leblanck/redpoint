@@ -5,8 +5,9 @@ tap 'cjbassi/gotop'
 tap 'teamookla/speedtest'
 
 # Binaries
-# brew 'firebase-cli' no longer in use
 brew 'pwgen'
+brew 'pyenv'
+brew 'fig'
 brew 'gotop'
 brew 'hugo'
 brew 'khanhas/tap/spicetify-cli'
@@ -14,8 +15,6 @@ brew 'npm'
 brew 'neofetch'
 brew 'speedtest'
 brew 'tree'
-brew 'ruby' #for Jekyll Dev
-brew 'rbenv' #for Jekyll Dev
 
 # Apps
 cask '1password'
@@ -29,13 +28,11 @@ cask 'firefox'
 cask 'fliqlo'
 cask 'font-hack-nerd-font'
 cask 'font-hack'
-# cask 'hey'
 cask 'iterm2'
-# cask 'itsycal'
 cask 'messenger'
 cask 'notion'
 cask 'numi'
-cask 'obsidian'
+cask 'pycharm-ce'
 cask 'rectangle'
 cask 'rocket'
 cask 'sketch'
