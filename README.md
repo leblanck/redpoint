@@ -31,18 +31,17 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | :----------------------- | :-------------    | :-----------------| :---------------|
 | 1Password                | Adobe CC          | Atom              | Clipy           |
 | Docker                   | Dozer             | Firefox           | Fliqlo          |
-| iTerm2                   | Itsycal           | Messenger         | Notion          | 
+| iTerm2                   | Itsycal           | PyCharm CE        | Notion          | 
 | Rectangle                | Rocket            | Sketch            | Slack           | 
 | Spotify                  | VS Code           | Wireshark         | Xnviewmp        |
  
  * Installs binaries:
  
-| binaries:         |          |              |       
-| :---------------- | :------- |:-------------|
-| pwgen             | tree     | Firebase CLI |
-| gotop             | npm      | Hugo         |
-| spicetify-cli     | speedtest| neofetch     |
-| Ruby              |rbenv     |              |
+| binaries:         |          |        |       
+| :---------------- | :------- |:-------|
+| pyenv             | poetry   | tree   |
+| gotop             | npm      | pwgen  |
+| speedtest         | neofetch |        |
 
 4. Installs Extras for Atom (including CLI Tools):
 
