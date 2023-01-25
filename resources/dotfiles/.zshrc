@@ -11,7 +11,7 @@ fi
 userName=$(/usr/bin/stat -f%Su /dev/console)
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kleblanc/.oh-my-zsh"
+export ZSH="/Users/$userName/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
