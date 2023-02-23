@@ -11,7 +11,7 @@
 #   Cask WishList is located    #
 #   below this description.     #
 #                               #
-#   Last Update: 02/03/2021     #
+#   Last Update: 02/23/2023     #
 #################################
 # Cask WishList/To Do           #
 #                               #
@@ -33,25 +33,6 @@ logging() {
     else
         exec >> $logFile
     fi
-}
-
-atomExtras() {
-  #Install Atom Themes
-  echo "============= `date` Installing Atom themes.."
-  apm install apple-wwdc-2016-syntax
-  apm install firewatch-syntax
-  apm install gruvbox
-  apm install halcyon-syntax
-
-  #Install Atom Packages
-  echo "============= `date` Installing Atom packages..."
-  apm install file-icons
-  apm install minimap
-  apm install pigments
-
-  #CLI Tools
-  echo "============= `date` Installing Atom CLI Tools..."
-  ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 }
 
 fonts() {
@@ -95,9 +76,6 @@ vscodeSetup() {
 }
 
 shellSetup() {
-    #The following will start the setup for local shell preferences (oh-my-zsh)
-    #iTerm2 is installed in the cask list in the caskInstaller function
-    
     #Do we have git installed?
     if [[ $(command -v git) == "" ]]; then
         echo "============= `date` Installing git..."
@@ -119,31 +97,32 @@ shellSetup() {
     fi
     
     #INSTALL ITERM JSON THEME FROM THIS REPO (iterm_profile.json; iTerm2 > Preferences > Profiles > Other Actions > Import JSON Profile)
-    
-    #Download iTerm theme (as backup)
-     # Set Theme by iTerm2 > Preferences > Profiles > Colors > Color Presets > Import - Import the halcyon.itermcolors file
-      ## Set Font and Non-ASCII font to Hack Nerd Font Mono 12pt Reg (iTerm2 > Preferences > Profiles > Text) 
-    git clone https://github.com/leblanck/gruvbox_iterm_theme.git
-    
     #Download Powerlevel10k ZSH Theme
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    
-
-    #Symlink all dotfiles
-    echo "============= `date` Linking all dotfiles..."
-    ln -sv ~/repos/redpoint/resources/dotfiles/.zshrc ~
-    ln -sv ~/repos/redpoint/resources/dotfiles/.gitconfig ~
-    ln -sv ~/repos/redpoint/resources/dotfiles/.gitignore_global ~
-    ln -sv ~/repos/redpoint/resources/dotfiles/.profile ~
-    ln -sv ~/repos/redpoint/resources/dotfiles/.vimrc ~
-    ln -sv ~/repos/redpoint/resources/dotfiles/.p10k.zsh ~
-    #ln -sv ~/repos/redpoint/resources/agnoster.zsh_theme ~/.oh-my-zsh/themes
-    git config --global core.excludesfile ~/.gitignore_global
-    sleep 1
 
     echo "============= `date` Installing CLI Trash..."
     npm install --global trash-cli
     sleep 5
+}
+
+dotfiles() {
+    cd $repoDir
+    git clone https://github.com/leblanck/dotfiles.git
+    # #Symlink all dotfiles
+    echo "============= `date` Linking all dotfiles..."
+    ln -sv $repoDir/dotfiles/.gitconfig ~
+    ln -sv $repoDir/dotfiles/.gitignore_global ~
+    ln -sv $repoDir/dotfiles/.macos ~
+    ln -sv $repoDir/dotfiles/.p10k.zsh ~
+    ln -sv $repoDir/dotfiles/.vimrc ~
+    ln -sv $repoDir/dotfiles/.zprofile ~
+    ln -sv $repoDir/dotfiles/.zshrc ~
+    ln -sv $repoDir/dotfiles/.zshrcexport ~
+
+    cp -R $repoDir/dotfiles/.config ~/
+
+    git config --global core.excludesfile ~/.gitignore_global
+    sleep 1
 }
 
 vimSetup() {
@@ -155,7 +134,7 @@ vimSetup() {
 }
 
 localMacOSSetup() {
-    source $repoDir/redpoint/resources/dotfiles/.macos
+    source $repoDir/dotfiles/.macos
 }
 
 homebrewInstall() {
@@ -184,8 +163,8 @@ sleep 240
 echo "============= `date` Installing homebrew and apps..."
 homebrewInstall
 
-echo "============= `date` Installing Atom extras..."
-atomExtras
+echo "============= `date` Setting Up shell preferences..."
+shellSetup
 
 echo "============= `date` Installing VS Code Extensions"
 vscodeSetup
@@ -193,10 +172,13 @@ vscodeSetup
 echo "============= `date` Installing fonts..."
 fonts
 
-echo "============= `date` Setting up shell preferences..."
-shellSetup
+echo "============= `date` Setting Up dotfiles..."
+dotfiles
 
-echo "============= `date` Setting up macOS local preferences..."
+echo "============= `date` Setting Up nvim..."
+vimSetup
+
+echo "============= `date` Setting Up macOS local preferences..."
 localMacOSSetup
 
 echo "============= `date` Done!"

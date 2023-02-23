@@ -18,7 +18,7 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 #### Install/Run:
 1. Run `mkdir ~/repos && cd ~/repos`
 2. Clone Repo: `git clone https://github.com/leblanck/redpoint.git`
-3. run using `./redPoint.sh`
+3. run `./redPoint.sh`
            
 #### What does this do?
 1. Setup Logging to: `~/Library/Logs/redPoint.log`
@@ -29,10 +29,10 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
  
 | macOS Apps:              |                   |                   |                 |
 | :----------------------- | :-------------    | :-----------------| :---------------|
-| 1Password                | Adobe CC          | Atom              | Clipy           |
+| 1Password                | Adobe CC          | Clipy             |                 |
 | Docker                   | Dozer             | Firefox           | Fliqlo          |
-| iTerm2                   | Itsycal           | PyCharm CE        | Notion          | 
-| Rectangle                | Rocket            | Sketch            | Slack           | 
+| iTerm2                   | Itsycal           | PyCharm CE        |                 | 
+| Rectangle                |                   | Sketch            | Slack           | 
 | Spotify                  | VS Code           | Wireshark         | Xnviewmp        |
  
  * Installs binaries:
@@ -43,16 +43,8 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | gotop             | npm      | pwgen  |
 | speedtest         | neofetch |        |
 
-4. Installs Extras for Atom (including CLI Tools):
 
-| Themes:                   | Extensions:      |                
-| :------------------------ | :--------------- |
-| firewatch-syntax          | file-icons       |  
-| halcyon-syntax            | minimap          |
-| apple-wwdc-2016-syntax    | pigments         |
-| gruvbox                   |
-
-5. Installs Extensions for VS Code:
+4. Installs Extensions for VS Code:
 
 | Extensions:               |                           |
 | :------------------------ | :-------------------------|
@@ -60,15 +52,11 @@ This repository serves as my way to help me setup and maintain my Mac(s). It tak
 | jdinhlife.gruvbox         | zhouronghui.propertylist  |
 | mauve.terraform           | ms-vscode.Go              |
 
-11. Sets up local shell preferences:
+5. Sets up local shell preferences:
   * Install/update Git
   * Install Oh-My-Zsh
   * Installs PowerLevel10k zsh Theme
-  * Downloads [Gruvbox](https://github.com/leblanck/gruvbox_iterm_theme.git) iTerm theme
-  * Symlink all dotiles from `redpoint/resources/dotfiles` to `~`
+  * Symlink all dotiles from [dotfiles](https://github.com/leblanck/dotfiles) to `~`
   * Installs [Trash](https://github.com/sindresorhus/trash) from npm
-  
-12. Sets up local macOS preferences.
-  * Dowloads Corsair iCUE Drivers to the Desktop for install.
 
-This is free to use, edit, change, learn from, but you enjoy this, feel free to [buy me a coffee!](https://www.buymeacoffee.com/kyleblanc)
+This is free to use, edit, change, learn from, but if you enjoy this, feel free to [buy me a coffee!](https://www.buymeacoffee.com/kyleblanc)
