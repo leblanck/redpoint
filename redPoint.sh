@@ -147,10 +147,11 @@ shellSetup() {
 }
 
 vimSetup() {
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-    #Open vim and run :PlugInstall command
+    #Install Packer
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+    ~/.config/nvim/site/pack/packer/start/packer.nvim
+    
+    #Run :PackerSync
 }
 
 localMacOSSetup() {
